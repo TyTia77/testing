@@ -28,8 +28,6 @@ export default class test extends React.Component {
 
     componentDidMount(){
         console.log('this.state :', this.state);
-
-        console.log('BreakfastContainer ', BreakfastContainer)
     }
 
     render(){

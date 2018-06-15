@@ -7,9 +7,7 @@ export default class test extends React.Component {
 
     constructor(props) {
         super()
-        this.state = {
-            itemtest: [1, 2, 3, 4, 5, 6, 7, 8]
-        }
+        this.state = {}
     }
 
     componentDidMount(){
@@ -17,13 +15,29 @@ export default class test extends React.Component {
     }
 
     sum(a, b) {
+        if (typeof a != 'number' || typeof b != 'number'){
+            return null
+        }
+
         return a + b
+    }
+
+    sub(a, b){
+        if (typeof a != 'number' || typeof b != 'number'){
+            return null
+        }
+
+        return a - b
     }
 
     render(){
         return (
             <div class="breakfast__container">
-                {this.props.items.map((item, index) => <StaticList key={index} item={item} />)}
+                {
+                    this.props.items
+                        .slice(0, this.props.items.length > 11 ? 11 : this.props.items.length)
+                        .map((item, index) => <StaticList key={index} item={item} />)
+                }
             </div>
         )
     }
