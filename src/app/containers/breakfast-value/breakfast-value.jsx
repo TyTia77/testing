@@ -1,38 +1,37 @@
-import React from "react"
-import style from "./breakfast-value.scss"
+import React from 'react'
+import style from './breakfast-value.scss'
 
-import StaticList from "../../presentational/static-list/static-list"
+import StaticList from '../../presentational/static-list/static-list'
 
 export default class test extends React.Component {
-
     constructor(props) {
         super()
         this.state = {}
     }
 
-    componentDidMount(){
+    componentDidMount() {
         // console.log('this.props :', this.props);
     }
 
     sum(a, b) {
-        if (typeof a != 'number' || typeof b != 'number'){
+        if (typeof a !== 'number' || typeof b !== 'number') {
             return null
         }
 
         return a + b
     }
 
-    sub(a, b){
-        if (typeof a != 'number' || typeof b != 'number'){
+    sub(a, b) {
+        if (typeof a !== 'number' || typeof b !== 'number') {
             return null
         }
 
         return a - b
     }
 
-    render(){
+    render() {
         return (
-            <div class="breakfast__container">
+            <div className='breakfast__container'>
                 {
                     this.props.items
                         .slice(0, this.props.items.length > 11 ? 11 : this.props.items.length)

@@ -7,13 +7,13 @@ import valMealRod from '../screen/value-meal-rod'
 import happyMealRod from '../screen/happy-meal-rod'
 import happyMealBf from '../screen/happy-meal-bf'
 
-const _router = () =>
+const router = () =>
     <Router history={hashHistory}>
-        <Route path='/' component={comp}></Route>
-        <Route path='val-bf' component={valMealBf}></Route>
-        <Route path='val-rod' component={valMealRod}></Route>
-        <Route path='happy-rod' component={happyMealRod}></Route>
-        <Route path='happy-bf' component={happyMealBf}></Route>
+        <Route path='/' component={comp} />
+        <Route path='val-bf' component={valMealBf} />
+        <Route path='val-rod' component={valMealRod} />
+        <Route path='happy-rod' component={happyMealRod} />
+        <Route path='happy-bf' component={happyMealBf} />
     </Router>
 
-export default _router
+export default router
