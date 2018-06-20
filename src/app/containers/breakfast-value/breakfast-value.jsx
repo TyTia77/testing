@@ -29,6 +29,37 @@ export default class test extends React.Component {
         return a - b
     }
 
+    LongestWord(sen) {
+        return sen
+          .match(/[a-z0-9]+/gi)
+          .reduce((largest, current) => largest = current.length > largest.length ? current : largest, '')
+    }
+
+    FirstFactorial(num) {
+        return num < 2 ? 1 : num * FirstFactorial(num - 1)
+    }
+
+    FirstReverse(str) {
+        return str.split('').reverse().join('')
+    }
+
+    SimpleAdding(num) {
+        let inc = 1
+        let total = 1
+
+        while (++inc <= num) {
+            total = inc + total
+        }
+
+        return total
+    }
+
+    LetterCapitalize(str) {
+        return str
+          .split(' ').map(x => x.slice(0, 1).toUpperCase() + x.slice(1))
+          .join(' ')
+    }
+
     render() {
         return (
             <div className='breakfast__container'>
