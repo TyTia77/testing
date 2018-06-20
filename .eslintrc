@@ -1,9 +1,12 @@
 {
+    "extends": "rallycoding",
     "parser": "babel-eslint",
-    "extends": "airbnb",
-    "plugins": [
-        "react",
-        "jsx-a11y",
-        "import"
-    ]
+    "rules": {
+        "semi": ["error", "never"],
+        "quotes": ["error", "single"],
+        "array-bracket-spacing": 2,
+        "no-unused-vars": 0,
+        "no-undef": 0,
+        "no-param-reassign": 0
+    }
 }
